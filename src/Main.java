@@ -62,7 +62,7 @@ public class Main {
 
             Person newPerson = new Person(fio, propusk, dolzn, dop);
             for (Person person : passport) {
-                if (person.getPropusk() == newPerson.getPropusk()) {
+                if (person.getPropusk() == newPerson.getPropusk() && !person.getFio().equals(newPerson.getFio())) {
                     passport.remove(person);
                     break;
                 }
